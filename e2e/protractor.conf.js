@@ -11,6 +11,9 @@ exports.config = {
 
     capabilities: {
         browserName: 'chrome',
+        chromeOptions: {
+            'args': ['disable-infobars']
+        }
     },
 
     framework: 'custom',  // set to "custom" instead of cucumber.
@@ -32,6 +35,9 @@ exports.config = {
     },
 
     onPrepare: function () {
+        require('ts-node').register({
+            project: require('path').join(__dirname, './tsconfig.e2e.json')
+        });
         browser.manage().window().maximize(); // maximize the browser before executing the feature files
     }
 };
