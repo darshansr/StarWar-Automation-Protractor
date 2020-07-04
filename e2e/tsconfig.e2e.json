@@ -1,0 +1,10 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "typeScript",
+    "baseUrl": "./",
+    "module": "commonjs",
+    "target": "es2017",
+    "types": ["chai", "cucumber", "node"]
+  }
+}
