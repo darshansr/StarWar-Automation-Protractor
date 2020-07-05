@@ -1,4 +1,4 @@
-import { element, by, ElementFinder } from 'protractor';
+import { element, by, ElementFinder, ElementArrayFinder } from 'protractor';
 
 export default class StarWarElements {
     public inputTextBox: ElementFinder;
@@ -7,6 +7,7 @@ export default class StarWarElements {
     public searchButton: ElementFinder;
     public notFound: ElementFinder;
     public givenName: ElementFinder;
+    public personDetails: ElementArrayFinder;
 
     constructor() {
         this.inputTextBox = element(by.id('query'));
@@ -15,5 +16,7 @@ export default class StarWarElements {
         this.searchButton = element(by.buttonText('Search'));
         this.notFound = element(by.xpath('//div[@id=\'searchNotFound\']'));
         this.givenName = element(by.xpath('//h6[@class=\'card-subtitle mb-2 text-muted\']'));
+        this.personDetails = element.all(by.xpath('//app-character[not(@id) or not(@class)]')).
+            all(by.className('card-body')).all(by.className('row'));
     }
 }

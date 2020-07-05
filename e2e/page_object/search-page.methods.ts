@@ -1,4 +1,5 @@
 import StarWarElements from './search-page.po';
+import { browser } from 'protractor';
 const starWar: StarWarElements = new StarWarElements();
 
 export default class StarWarMethods {
@@ -30,5 +31,23 @@ export default class StarWarMethods {
         } else {
             return await starWar.notFound.getText();
         }
+    }
+
+    async verifyPersonResults() {
+        const results = await starWar.personResults;
+        const finalResult = [];
+        for (let index = 0; index < results.length; index++) {
+            const value = await results[index].getText();
+            finalResult.push(value);
+        }
+        return finalResult;
+    }
+
+    gotoWebPage(url: string) {
+        return browser.get('http://' + url + ':4200/');
+    }
+
+    browserSleep(ms: number) {
+        return browser.sleep(ms);
     }
 }
