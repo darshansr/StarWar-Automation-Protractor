@@ -3,9 +3,7 @@ const { Given, When, Then } = require('cucumber');
 const chai = require('chai').use(require('chai-as-promised'));
 const expect = chai.expect;
 const assert = chai.assert;
-const testData = require('../testdata.json');
 const starWar: StarWarMethods = new StarWarMethods();
-let resultFound = false;
 
 Given(/^I navigate to "(.*?)"$/, { timeout: 90 * 1000 }, async (url: string) => {
     await starWar.gotoWebPage(url);
@@ -28,20 +26,38 @@ When(/^I click on "(.*?)" button/, async (buttonName: string) => {
     await starWar.browserSleep(1500);
 });
 
-Then(/^Star war details are "(.*?)"$/, async (expected: string) => {
+Then(/^Star war details are "(.*?)" "(.*?)"$/, async (expected: string, name: string) => {
     if (expected === 'Found') {
-        resultFound = true;
-        await expect(await starWar.isResultFound(resultFound)).to.deep.equal(testData.name);
+        await expect(await starWar.isResultFound(true)).to.include(starWar.checkNamePresentInTD(name)[0]);
     } else {
-        resultFound = false;
-        await expect(await starWar.isResultFound(resultFound)).to.deep.equal('Not found.');
+        await expect(await starWar.isResultFound(false)).to.deep.equal('Not found.');
     }
 });
 
-Then(/^Verify person results/, async () => {
-    if (resultFound === true) {
+Then(/^Verify person "(.*?)" results/, async (name: string) => {
+    const resultLength = await starWar.numberOfPersonResults();
+    if (resultLength.length === 0) {
+        await assert.equal(resultLength.length, 0, 'Not Found');
+    } else if (resultLength.length === 1) {
+        const testData = starWar.checkNamePresentInTD(name)[1];
         (await starWar.verifyPersonResults()).forEach(async (result) => {
-            await expect(testData[result.split(':')[0]]).to.equal(result.split(':')[1].trim(), 'not matched');
+            await expect(testData[result.split(':')[0]]).to.equal(result.split(':')[1].trim(), 'Fail to match in data');
         });
+    } else {
+        await assert.isAbove(resultLength.length, 1, 'Partial Match');
+    }
+});
+
+Then(/^Verify planets "(.*?)" results/, async (name: string) => {
+    const resultLength = await starWar.numberOfPlanetsResults();
+    if (resultLength.length === 0) {
+        await assert.equal(resultLength.length, 0, 'Not Found');
+    } else if (resultLength.length === 1) {
+        const testData = starWar.checkNamePresentInTD(name)[1];
+        (await starWar.verifyPlantesResults()).forEach(async (result) => {
+            await expect(testData[result.split(':')[0]]).to.equal(result.split(':')[1].trim(), 'Fail to match in data');
+        });
+    } else {
+        await assert.isAbove(resultLength.length, 1, 'Partial Match');
     }
 });

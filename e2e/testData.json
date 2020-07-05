@@ -1,9 +1,26 @@
-{
-        "name":"Luke Skywalker",
-        "Gender": "male",
-        "Birth year": "19BBY",
-        "Eye color": "blue",
-        "Skin color": "fair"
-}
-
- 
+[
+        {
+                "Luke Skywalker": {
+                        "Gender": "male",
+                        "Birth year": "19BBY",
+                        "Eye color": "blue",
+                        "Skin color": "fair"
+                },
+                "al": {
+                        "Gender": "male",
+                        "Birth year": "19BBY",
+                        "Eye color": "blue",
+                        "Skin color": "fair"
+                },
+                "Alderaan": {
+                        "Population": "2000000000",
+                        "Climate": "temperate",
+                        "Gravity": "1 standard"
+                },
+                "an": {
+                        "Population": "2000000000",
+                        "Climate": "temperate",
+                        "Gravity": "1 standard"
+                }
+        }
+]

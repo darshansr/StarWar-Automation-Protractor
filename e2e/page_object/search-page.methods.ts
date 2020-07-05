@@ -1,6 +1,7 @@
 import StarWarElements from './search-page.po';
 import { browser } from 'protractor';
 const starWar: StarWarElements = new StarWarElements();
+const testData = require('../testdata.json');
 
 export default class StarWarMethods {
     selectRadioButton(selectType: string) {
@@ -34,13 +35,38 @@ export default class StarWarMethods {
     }
 
     async verifyPersonResults() {
-        const results = await starWar.personResults;
+        return await this.getStarWarResults(await starWar.personResults);
+    }
+
+    async verifyPlantesResults() {
+        return await this.getStarWarResults(await starWar.planetsResults);
+    }
+
+    async numberOfPersonResults() {
+        return await starWar.numberOfPersonResults;
+    }
+
+    async numberOfPlanetsResults() {
+        return await starWar.numberOfPlanetsResults;
+    }
+
+    async getStarWarResults(results: any) {
         const finalResult = [];
         for (let index = 0; index < results.length; index++) {
             const value = await results[index].getText();
             finalResult.push(value);
         }
         return finalResult;
+    }
+
+    checkNamePresentInTD(nameProp: string) {
+        let name: string, obj: any;
+        testData.forEach((data) => {
+            if (data.hasOwnProperty(nameProp)) {
+                [name, obj] = [nameProp, data[nameProp]];
+            }
+        });
+        return [name, obj];
     }
 
     gotoWebPage(url: string) {

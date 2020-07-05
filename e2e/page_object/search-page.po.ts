@@ -7,7 +7,11 @@ export default class StarWarElements {
     public searchButton: ElementFinder;
     public notFound: ElementFinder;
     public givenName: ElementFinder;
-    public personDetails: ElementArrayFinder;
+    public personResults: ElementArrayFinder;
+    public planetsResults: ElementArrayFinder;
+    public numberOfPersonResults: ElementArrayFinder;
+    public numberOfPlanetsResults: ElementArrayFinder;
+
 
     constructor() {
         this.inputTextBox = element(by.id('query'));
@@ -16,7 +20,11 @@ export default class StarWarElements {
         this.searchButton = element(by.buttonText('Search'));
         this.notFound = element(by.xpath('//div[@id=\'searchNotFound\']'));
         this.givenName = element(by.xpath('//h6[@class=\'card-subtitle mb-2 text-muted\']'));
-        this.personDetails = element.all(by.xpath('//app-character[not(@id) or not(@class)]')).
+        this.personResults = element.all(by.xpath('//app-character[not(@id) or not(@class)]')).
             all(by.className('card-body')).all(by.className('row'));
+        this.planetsResults = element.all(by.xpath('//app-planet[not(@id) or not(@class)]')).
+            all(by.className('card-body')).all(by.className('row'));
+        this.numberOfPersonResults = element.all(by.xpath('//app-character[not(@id) or not(@class)]'));
+        this.numberOfPlanetsResults = element.all(by.xpath('//app-planet[not(@id) or not(@class)]'));
     }
 }
