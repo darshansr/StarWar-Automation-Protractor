@@ -12,12 +12,14 @@ Given(/^I navigate to "(.*?)"$/, { timeout: 90 * 1000 }, async (url: string) => 
 When(/^I select a type "(.*?)"$/, async (typeName: string) => {
     if (typeName.toLowerCase() !== 'planets') {
         assert.strictEqual(true, starWar.selectRadioButton(typeName), 'Fail to select people radio button');
+        await starWar.browserSleep(1500);
     } else {
         assert.strictEqual(true, starWar.selectRadioButton(typeName), 'Fail to select planets radio button');
+        await starWar.browserSleep(1500);
     }
 });
 
-When(/^I search for "(.*?)"$/, async (name: string) => {
+When(/^I search for a "(.*?)"$/, async (name: string) => {
     await starWar.userInput(name); // what type of assert i can right isOk()?
 });
 
@@ -26,7 +28,7 @@ When(/^I click on "(.*?)" button/, async (buttonName: string) => {
     await starWar.browserSleep(1500);
 });
 
-Then(/^Star war details are "(.*?)" "(.*?)"$/, async (expected: string, name: string) => {
+Then(/^Star Wars details are "(.*?)" for "(.*?)"$/, async (expected: string, name: string) => {
     if (expected === 'Found') {
         await expect(await starWar.isResultFound(true)).to.include(starWar.checkNamePresentInTD(name)[0]);
     } else {
@@ -48,7 +50,7 @@ Then(/^Verify person "(.*?)" results/, async (name: string) => {
     }
 });
 
-Then(/^Verify planets "(.*?)" results/, async (name: string) => {
+Then(/^Verify planet "(.*?)" results/, async (name: string) => {
     const resultLength = await starWar.numberOfPlanetsResults();
     if (resultLength.length === 0) {
         await assert.equal(resultLength.length, 0, 'Not Found');
@@ -60,4 +62,18 @@ Then(/^Verify planets "(.*?)" results/, async (name: string) => {
     } else {
         await assert.isAbove(resultLength.length, 1, 'Partial Match');
     }
+});
+
+When(/^I clear form "(.*?)"$/, async (name: string) => {
+    await starWar.userInput(name);
+    await starWar.browserSleep(1500);
+});
+
+When(/^I press enter key/, async () => {
+    await starWar.pressEnter();
+    await starWar.browserSleep(1500);
+});
+
+Then(/^there are more than one results listed$/, async () => {
+    await assert.isAbove((await starWar.numberOfPlanetsResults()).length, 1, 'Partial Match');
 });

@@ -1,5 +1,5 @@
 import StarWarElements from './search-page.po';
-import { browser } from 'protractor';
+import { browser, protractor } from 'protractor';
 const starWar: StarWarElements = new StarWarElements();
 const testData = require('../testdata.json');
 
@@ -15,7 +15,11 @@ export default class StarWarMethods {
     }
 
     userInput(text: string) {
-        return starWar.inputTextBox.sendKeys(text);
+        if (text === '') {
+            return starWar.inputTextBox.clear();
+        } else {
+            return starWar.inputTextBox.sendKeys(text);
+        }
     }
 
     buttonClick(buttonName: string) {
@@ -75,5 +79,9 @@ export default class StarWarMethods {
 
     browserSleep(ms: number) {
         return browser.sleep(ms);
+    }
+
+    pressEnter() {
+        return browser.actions().sendKeys(protractor.Key.ENTER).perform();
     }
 }

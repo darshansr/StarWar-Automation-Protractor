@@ -1,15 +1,14 @@
-Feature: Search for a Star Wars character
+Feature: Search for a Star Wars characters
 
-    Scenario Outline: Search for character (person)
+    Scenario Outline: Search for a character (person)
         Given I navigate to "localhost"
         And  I select a type "person"
-        And  I search for "<persons name>"
+        And  I search for a "<person name>"
         When I click on "Search" button
-        Then Star war details are "<expected>" "<persons name>"
-        And  Verify person "<persons name>" results
+        Then Star Wars details are "<expected>" for "<person name>"
+        And  Verify person "<person name>" results
 
         Examples:
-            | persons name   | expected  |
+            | person name    | expected  |
             | Luke Skywalker | Found     |
-            | al             | Found     |
             | darshan        | Not found |
