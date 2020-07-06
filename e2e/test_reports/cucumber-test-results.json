@@ -1,0 +1,986 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Search for a Star Wars Automation Additional Scenarios",
+    "line": 1,
+    "id": "search-for-a-star-wars-automation-additional-scenarios",
+    "tags": [],
+    "uri": "e2e\\features\\search-additional.feature",
+    "elements": [
+      {
+        "id": "search-for-a-star-wars-automation-additional-scenarios;search-for-either-a-person-or-a-planet,-clear-form-and-search",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Search for either a person or a planet, clear form and search",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I navigate to \"localhost\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3339000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "I select a type \"person\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1692000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I search for a \"Luke Skywalker\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 276000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I click on \"Search\" button",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1613000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "Star Wars details are \"Found\" for \"Luke Skywalker\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 289000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I clear form \"\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1667000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I click on \"Search\" button",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1607000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "Star Wars details are \"Not found\" for \"\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 114000000,
+              "error_message": "NoSuchElementError: No element found using locator: By(xpath, //div[@id='searchNotFound'])\n    at elementArrayFinder.getWebElements.then (C:\\Users\\600041205\\Desktop\\jobs apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\protractor\\built\\element.js:814:27)\n    at ManagedPromise.invokeCallback_ (C:\\Users\\600041205\\Desktop\\jobs apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\selenium-webdriver\\lib\\promise.js:1376:14)\n    at TaskQueue.execute_ (C:\\Users\\600041205\\Desktop\\jobs apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\selenium-webdriver\\lib\\promise.js:3084:14)\n    at TaskQueue.executeNext_ (C:\\Users\\600041205\\Desktop\\jobs apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\selenium-webdriver\\lib\\promise.js:3067:27)\n    at asyncRun (C:\\Users\\600041205\\Desktop\\jobs apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\selenium-webdriver\\lib\\promise.js:2927:27)\n    at C:\\Users\\600041205\\Desktop\\jobs apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\selenium-webdriver\\lib\\promise.js:668:7\n    at process._tickCallback (internal/process/next_tick.js:68:7)Error: \n    at ElementArrayFinder.applyAction_ (C:\\Users\\600041205\\Desktop\\jobs apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\protractor\\built\\element.js:459:27)\n    at ElementArrayFinder.(anonymous function).args [as getText] (C:\\Users\\600041205\\Desktop\\jobs apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\protractor\\built\\element.js:91:29)\n    at ElementFinder.(anonymous function).args [as getText] (C:\\Users\\600041205\\Desktop\\jobs apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\protractor\\built\\element.js:831:22)\n    at SearchPageMethods.isResultFound (C:\\Users\\600041205\\Desktop\\jobs apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\e2e\\page_object\\search-page.methods.ts:45:46)\n    at World.Then (C:\\Users\\600041205\\Desktop\\jobs apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\e2e\\step_definations\\search.steps.ts:34:51)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "search-for-a-star-wars-automation-additional-scenarios;search-for-a-person-and-press-enter-key",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Search for a person and press ENTER Key",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "I navigate to \"localhost\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1684000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I select a type \"person\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1654000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "I search for a \"Luke Skywalker\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 162000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I press enter key",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1533000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "Star Wars details are \"Found\" for \"Luke Skywalker\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 47000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "search-for-a-star-wars-automation-additional-scenarios;search-full-person-name,-switch-to-a-planet-and-search-same-full-name",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "Search full person name, switch to a planet and search same full name",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 21,
+            "name": "I navigate to \"localhost\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1669000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I select a type \"person\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1772000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "I search for a \"Luke Skywalker\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 504000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 24,
+            "name": "I click on \"Search\" button",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1614000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "Star Wars details are \"Found\" for \"Luke Skywalker\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 41000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 26,
+            "name": "I select a type \"planets\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1595000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I click on \"Search\" button",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1600000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "Star Wars details are \"Not found\" for \"\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 55000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "search-for-a-star-wars-automation-additional-scenarios;search-full-planet-name,-switch-to-a-person-and-search-same-full-name",
+        "keyword": "Scenario",
+        "line": 30,
+        "name": "Search full planet name, switch to a person and search same full name",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 31,
+            "name": "I navigate to \"localhost\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1756000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "I select a type \"planets\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1622000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "I search for a \"Alderaan\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 138000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 34,
+            "name": "I click on \"Search\" button",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1621000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 35,
+            "name": "Star Wars details are \"Found\" for \"Alderaan\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 68000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 36,
+            "name": "I select a type \"person\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1573000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 37,
+            "name": "I click on \"Search\" button",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1594000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 38,
+            "name": "Star Wars details are \"Not found\" for \"\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 55000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "search-for-a-star-wars-automation-additional-scenarios;search-for-a-partial-planets-matching",
+        "keyword": "Scenario",
+        "line": 40,
+        "name": "Search for a partial planets matching",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 41,
+            "name": "I navigate to \"localhost\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1182000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "I select a type \"planets\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1598000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "I search for a \"an\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 123000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 44,
+            "name": "I click on \"Search\" button",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1604000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 45,
+            "name": "Star Wars details are \"Found\" for \"an\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 88000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 46,
+            "name": "there are more than one results listed",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 52000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Search for a Star Wars characters",
+    "line": 1,
+    "id": "search-for-a-star-wars-characters",
+    "tags": [],
+    "uri": "e2e\\features\\search-person.feature",
+    "elements": [
+      {
+        "id": "search-for-a-star-wars-characters;search-for-a-character-(person)",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Search for a character (person)",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I navigate to \"localhost\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1631000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "I select a type \"person\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1650000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I search for a \"Luke Skywalker\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 173000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I click on \"Search\" button",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1598000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "Star Wars details are \"Found\" for \"Luke Skywalker\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 46000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "Verify person \"Luke Skywalker\" results",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 158000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "search-for-a-star-wars-characters;search-for-a-character-(person)",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Search for a character (person)",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I navigate to \"localhost\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1750000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "I select a type \"person\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1614000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I search for a \"darshan\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 195000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I click on \"Search\" button",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1644000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "Star Wars details are \"Not found\" for \"darshan\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 112000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "Verify person \"darshan\" results",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 44000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Search for a Star Wars planets",
+    "line": 1,
+    "id": "search-for-a-star-wars-planets",
+    "tags": [],
+    "uri": "e2e\\features\\search-planets.feature",
+    "elements": [
+      {
+        "id": "search-for-a-star-wars-planets;search-for-a-planet",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Search for a planet",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I navigate to \"localhost\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1537000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "I select a type \"planets\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1642000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I search for a \"Alderaan\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 256000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I click on \"Search\" button",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1720000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "Star Wars details are \"Found\" for \"Alderaan\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 57000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "Verify planet \"Alderaan\" results",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 126000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "search-for-a-star-wars-planets;search-for-a-planet",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Search for a planet",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I navigate to \"localhost\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1128000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "I select a type \"planets\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1597000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I search for a \"darshan\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 939000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I click on \"Search\" button",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1917000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "Star Wars details are \"Not found\" for \"darshan\"",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 531000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "Verify planet \"darshan\" results",
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 58000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "apply\\FedEx\\star_war_demo\\StarWar-Automation-Protractor\\node_modules\\stacktrace-js\\stacktrace.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
