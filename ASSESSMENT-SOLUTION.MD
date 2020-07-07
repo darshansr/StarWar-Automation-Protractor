@@ -22,17 +22,18 @@ Protractor is an end-to-end test framework for Angular and AngularJS application
 
 ### e2e Testing 
 
-├── ...
-├── e2e                   # Spec files 
-│   ├── features         # Contains given scenarios in different feature files
-│   ├── helper           # supporting files like report,Hooks screenshot
-│   ├── page_object      # contains POM Finder and its methods to handle logic
-│   ├── step_definitions # Defining Given, when and then
-│   ├── test_reports     # cucumber_test_report in html and json formate   
-│   ├── protractor.conf  # webdriver, cucumber, browser utilites, report etc.
-│   ├── testData.json    # test data contains actual data to compare expected one 
-│   └── tsconfig.e2e.json # typescript configuration
-└── ...
+
+    ├── ...
+    ├── e2e                   # Spec files 
+    │   ├── features         # Contains given scenarios in different feature files
+    │   ├── helper           # supporting files like report,Hooks screenshot
+    │   ├── page_object      # contains POM Finder and its methods to handle logic
+    │   ├── step_definitions # Defining Given, when and then
+    │   ├── test_reports     # cucumber_test_report in html and json formate   
+    │   ├── protractor.conf  # webdriver, cucumber, browser utilites, report etc.
+    │   ├── testData.json    # test data contains actual data to compare expected one 
+    │   └── tsconfig.e2e.json # typescript configuration
+    └── ...
 
 #### Features Files,
 
